@@ -1,134 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gladys Ulegu | Data Analyst</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f5f5f5;
-            color: #222;
-        }
-        header {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 70px 20px;
-        }
-        header h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
-        header p {
-            font-size: 20px;
-        }
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 50px 20px;
-        }
-        h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .skill {
-            background: white;
-            padding: 12px 18px;
-            border-radius: 6px;
-        }
-        .project {
-            background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
-        a {
-            color: inherit;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gladys Ulegu | Data Analyst</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f8fa;
+    color: #111827;
+    line-height: 1.6;
+}
+
+/* NAVIGATION */
+
+nav {
+    background: #071016;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo-circle {
+    color: #6ee7a0;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #6ee7a0;
+}
+
+/* HERO */
+
+.hero {
+    background: #071016;
+    color: white;
+    text-align: center;
+    padding: 60px 20px 80px;
+}
+
+.profile-photo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #6ee7a0;
+}
+
+.hero h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #e5e7eb;
+}
+
+/* SOCIAL BUTTONS */
+
+.socials {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.socials a {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #777;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.socials a:hover {
+    border-color: #6ee7a0;
+    color: #6ee7a0;
+}
+
+/* SECTIONS */
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 30px;
+}
+
+.section-title {
+    font-size: 40px;
+    margin-bottom: 25px;
+    border-left: 7px solid #4ade80;
+    padding-left: 18px;
+}
+
+.about-text {
+    font-size: 19px;
+    color: #374151;
+}
+
+/* SKILLS */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* PROJECTS */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.project h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.project p {
+    color: #4b5563;
+}
+
+.tools {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact a {
+    color: #16a34a;
+    text-decoration: none;
+}
+
+/* FOOTER */
+
+footer {
+    background: #071016;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 18px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+</style>
 </head>
+
 <body>
-<header>
-    <h1>Hi, I'm Gladys Ulegu</h1>
-    <p>Aspiring Data Analyst</p>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">
+        <div class="logo-circle">GU</div>
+        Gladys Ulegu
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero" id="home">
+
+    <img
+        src="A3CCCE1A-2446-4699-97C5-FB5E828831FA.png"
+        alt="Gladys Ulegu"
+        class="profile-photo"
+    >
+
+    <h1>
+        Hi, I'm <span>Gladys Ulegu</span>
+    </h1>
+
+    <h2>Data Analyst</h2>
+
     <p>I turn raw data into meaningful insights.</p>
+
+    <div class="socials">
+
+        <a href="https://www.linkedin.com/" target="_blank">in</a>
+
+        <a href="https://github.com/glad-12" target="_blank">GH</a>
+
+        <a href="mailto:your-email@example.com">@</a>
+
+        <a href="#" target="_blank">CV</a>
+
+    </div>
+
 </header>
-<section>
-    <h2>About Me</h2>
-    <p>
-        I'm an aspiring Data Analyst with a growing foundation in
-        Excel, Power Query, Power Pivot, SQL and Power BI.
-        I enjoy cleaning, analyzing and visualizing data to uncover
-        meaningful patterns and insights.
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <p class="about-text">
+        I'm a Data Analyst with a growing foundation in Excel,
+        Power Query, Power Pivot, SQL and Power BI. I enjoy
+        cleaning, analyzing and visualizing data to uncover
+        meaningful patterns and insights that support better
+        decision-making.
     </p>
+
 </section>
+
+
+<!-- SKILLS -->
+
 <section>
-    <h2>Skills</h2>
+
+    <h2 class="section-title">Skills</h2>
+
     <div class="skills">
-        <div class="skill">Excel</div>
-        <div class="skill">Power Query</div>
-        <div class="skill">Power Pivot</div>
-        <div class="skill">Power BI</div>
-        <div class="skill">SQL</div>
-        <div class="skill">Data Cleaning</div>
-        <div class="skill">Data Visualization</div>
-        <div class="skill">Data Analysis</div>
+
+        <div class="skill">📊 Excel</div>
+
+        <div class="skill">🔄 Power Query</div>
+
+        <div class="skill">📈 Power Pivot</div>
+
+        <div class="skill">📊 Power BI</div>
+
+        <div class="skill">🗄️ SQL</div>
+
+        <div class="skill">🔎 Data Analysis</div>
+
     </div>
+
 </section>
-<section>
-    <h2>Projects</h2>
-    <div class="project">
-        <h3>Electronic Sales Analysis</h3>
-        <p>
-            Analyzed sales performance across months, regions,
-            customer demographics and income groups.
-        </p>
-        <p><strong>Tools:</strong> Excel, Power BI</p>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects">
+
+        <div class="project">
+
+            <h3>Electronic Sales Analysis</h3>
+
+            <p>
+                Analyzed electronic sales data to understand
+                monthly trends, customer demographics, income
+                groups and regional performance.
+            </p>
+
+            <p class="tools">
+                Tools: Excel, Power BI
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>Chip Purchase Analysis</h3>
+
+            <p>
+                Analyzed customer purchasing behavior and
+                transaction data to identify customer segments,
+                sales patterns and purchasing trends.
+            </p>
+
+            <p class="tools">
+                Tools: Excel, Power Query, Power Pivot
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>Betting Addiction Analysis</h3>
+
+            <p>
+                Explored demographic and behavioral data to
+                identify patterns in betting behavior, income
+                impact, debt and relationships.
+            </p>
+
+            <p class="tools">
+                Tools: Excel, Power Query, Power Pivot
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>Sales Performance Dashboard</h3>
+
+            <p>
+                Built a sales dashboard to analyze revenue,
+                quantity, customers, products and yearly
+                performance.
+            </p>
+
+            <p class="tools">
+                Tools: Excel, Power Query, Power Pivot
+            </p>
+
+        </div>
+
     </div>
-    <div class="project">
-        <h3>Chip Purchase Analysis</h3>
-        <p>
-            Analyzed customer purchasing behavior and sales
-            performance using data cleaning and transformation.
-        </p>
-        <p><strong>Tools:</strong> Excel, Power Query, Power Pivot</p>
-    </div>
-    <div class="project">
-        <h3>Betting Addiction Analysis</h3>
-        <p>
-            Explored demographic and behavioral data to identify
-            patterns related to betting and financial impact.
-        </p>
-        <p><strong>Tools:</strong> Excel, Power Query, Power Pivot</p>
-    </div>
+
 </section>
-<section>
-    <h2>Contact</h2>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <h2 class="section-title">Let's Connect</h2>
+
+    <p>
+        Interested in working together or discussing data?
+    </p>
+
     <p>
         GitHub:
-        <a href="https://github.com/gladysulegu">
-            github.com/gladysulegu
+        <a href="https://github.com/glad-12" target="_blank">
+            github.com/glad-12
         </a>
     </p>
+
     <p>
-        LinkedIn: Add your LinkedIn profile here
+        Email:
+        <a href="mailto:your-email@example.com">
+            your-email@example.com
+        </a>
     </p>
+
 </section>
+
+
 <footer>
-    <p>© 2026 Gladys Ulegu</p>
+
+    <p>© 2026 Gladys Ulegu. All rights reserved.</p>
+
 </footer>
+
 </body>
 </html>
